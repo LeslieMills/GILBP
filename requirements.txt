@@ -18,3 +18,4 @@ seaborn==0.10.1
 dash_bootstrap_components==0.13.1
 numpy==1.21.4
 scikit_learn==1.0.1
+pillow=9.0.1
