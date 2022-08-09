@@ -1,5 +1,5 @@
 # Step 1: Import the Os
-FROM devashishupadhyay/scikit-learn-docker
+FROM devashishupadhyay/scikit-learn-docker:latest
 
 # Step 2: Install pip and Python Dependencies
 # RUN apt-get add cmd:pip3 --no-cache python3-dev \
