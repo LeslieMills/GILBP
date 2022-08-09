@@ -28,6 +28,7 @@ COPY . /app
 
 #Update Image (L.M)
 RUN apt-get --allow-releaseinfo-change update -y && apt-get full-upgrade -y && apt-get autoremove -y && apt-get clean -y && apt-get autoclean -y
+RUN apt-get install apt-utils -y
 
 RUN pip3 install --no-cache-dir -r requirements.txt
 
