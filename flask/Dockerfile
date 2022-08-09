@@ -26,10 +26,12 @@ COPY . /app
 # RUN apk add --no-cache gcc python3-dev
 # RUN apk add --no-cache gcc libc-dev linux-headers
 
-RUN pip3 install --no-cache-dir -r requirements.txt
-
 #Perform update (L.M)
 RUN apt-get --allow-releaseinfo-change update -y && apt-get full-upgrade -y && apt-get autoremove -y && apt-get clean -y && apt-get autoclean -y
+RUN apt-get install apt-utils -y
+
+RUN pip3 install --no-cache-dir -r requirements.txt
+
 
 # Step 6:  run the command to start uWSGI
 CMD ["uwsgi", "app.ini"]
