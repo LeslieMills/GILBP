@@ -1,0 +1,45 @@
+version: "3.7"
+
+services:
+
+  flask:
+    build: ./flask
+    container_name: flask
+    restart: always
+    env_file:
+      - dev.env
+    expose:
+      - 8080
+    links:
+      - mongo
+
+  ai_module:
+    build: ./ai_module
+    container_name: ai_module
+    restart: always
+    expose:
+      - 5000
+    ports:
+      - "5000:5000"
+    links:
+      - mongo
+
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    restart: always
+    ports:
+      - "80:80"
+
+  mongo:
+    image: mongo:latest
+    hostname: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_DATABASE=initial_db
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=pass
+
+    
