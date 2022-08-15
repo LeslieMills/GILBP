@@ -1,5 +1,5 @@
 # Step 1: Import the Os
-FROM devashishupadhyay/scikit-learn-docker:latest
+FROM devashishupadhyay/scikit-learn-docker
 
 # Step 2: Install pip and Python Dependencies
 # RUN apt-get add cmd:pip3 --no-cache python3-dev \
@@ -26,12 +26,10 @@ COPY . /app
 # RUN apk add --no-cache gcc python3-dev
 # RUN apk add --no-cache gcc libc-dev linux-headers
 
-#Perform update (L.M)
-RUN apt-get --allow-releaseinfo-change update -y && apt-get full-upgrade -y && apt-get autoremove -y && apt-get clean -y && apt-get autoclean -y
-RUN apt-get install apt-utils -y
-
 RUN pip3 install --no-cache-dir -r requirements.txt
 
+#Perform update (L.M)
+RUN apt-get --allow-releaseinfo-change update -y && apt-get full-upgrade -y && apt-get autoremove -y && apt-get clean -y && apt-get autoclean -y
 
 # Step 6:  run the command to start uWSGI
 CMD ["uwsgi", "app.ini"]

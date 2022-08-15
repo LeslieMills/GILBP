@@ -177,7 +177,7 @@ def on_login_click(login_n_clicks, logout_n_clicks,username, password):
     #Check if user is found
     if user is not None:
         #Check if password is a match
-        if check_password_hash(user.password, password):
+        if user.password==password:
             # Log the user in. This is an inbuilt flask-login library function
             login_user(user)
             # Print to console
@@ -219,10 +219,14 @@ def login_button_user_interaction(login_n_clicks, username, password):
     if login_n_clicks > 0:
         #Retrieve the user object with the name that is same as the username input
         user = Users.query.filter_by(username=username).first()
+        print(user)
+        print(username)
+        print(password)
+        print(user.password)
         # check if null was returned. If not username is valid
         if user:
             #check the password. Return nothing if success
-            if check_password_hash(user.password, password):
+            if user.password==password:
                 return ''
             else:
                 return 'Incorrect password'
@@ -477,6 +481,8 @@ def on_map_click(clickdata, selectedData,start_date, end_date,session_id,value):
                 prevent_initial_call=True)
 def upload_complete(sessionid,fileID2, options,isCompleted, filename):
     if(isCompleted):
+        print(options)
+        print(sessionid)
         for x in options[sessionid]:
             if x['label'] != "Demo file":
                 options[sessionid].pop()
