@@ -64,8 +64,11 @@ COPY . /app
 
 RUN pip3 install --no-cache-dir -r requirements.txt
 
+RUN pip3 uninstall --yes Werkzeug
+RUN pip3 install Werkzeug==2.0.3
 RUN pip uninstall --yes markupsafe
-RUN pip3 install markupsafe==2.0.1
+RUN pip3 install markupsafe==2.0.1  
+
 # Step 6:  run the command to start uWSGI
 
 CMD ["uwsgi", "app.ini"]
