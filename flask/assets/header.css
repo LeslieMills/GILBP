@@ -1,0 +1,272 @@
+.app-div--titlenav
+{
+    -webkit-box-shadow:0px 0px 5px 3px #707070 ;
+-moz-box-shadow:0px 0px 5px 3px #707070 ;
+box-shadow:0px 0px 5px 3px #707070 ;
+}
+
+  .flex-container {
+
+    display: flex;
+    flex-direction: row;     
+    font-size:5px;
+	  font-weight:bold;
+    background-color: #ffffff;
+    height: 100%;
+    padding: 0px;
+    gap: 0px;  
+    grid-auto-rows: 1fr;
+
+  }
+
+  .flex-container > div{
+    background: #ffffff;
+    border: 3px solid #ffffff;
+    border-radius: 5px;
+    padding: 5px;
+    font-size:5px;
+  	font-weight:bold;
+    height: 100%;
+  
+  }
+
+  .flex-container2 {
+
+    display: flex;
+    flex-direction: column;         
+
+    background-color: #5c66be;
+    height: 100%;
+    padding: 5px;
+    gap: 5px;   
+
+  }
+
+  .flex-container2 > div{
+    flex-direction: column;
+    background: #ffffff00;
+    border: 3px solid #ffffff00;
+    border-radius: 2px;
+    padding: 5px;
+  }
+
+
+
+			
+  .item2 { 
+    /* flex:3 1 auto; */
+    width: 50%;
+    height: 100%;
+    background-color:#ffffff;
+    border:1px solid #c7d4d283;
+    border-radius:5px;
+  }
+
+  .item2 > graph { 
+    /* flex:3 1 auto; */
+    width: 100%;
+    height: 100%;
+  }
+			
+
+  .item3 { 
+    /* flex:2 1 auto; */
+    width: 30%;
+    height: 100%;
+    flex-direction: column;
+    background-color:#ffffff;
+    border:1px solid #c7d4d283;
+    border-radius:5px;
+
+  }
+
+  .item3 > graph { 
+    /* flex:3 1 auto; */
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .myButton {
+	box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:15px;
+	font-weight:bold;
+	padding:11px 23px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+	background-color:#6c7c7c;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.myButton2 {
+	-moz-box-shadow: 0px 1px 0px 0px #fff6af;
+	-webkit-box-shadow: 0px 1px 0px 0px #fff6af;
+	box-shadow: 0px 1px 0px 0px #fff6af;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffab23));
+	background:-moz-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	background:-webkit-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	background:-o-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	background:-ms-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ffab23',GradientType=0);
+	background-color:#ffec64;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 20px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+    width: auto;
+}
+    .myButton2:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffab23), color-stop(1, #ffec64));
+	background:-moz-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+	background:-webkit-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+	background:-o-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+	background:-ms-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffab23', endColorstr='#ffec64',GradientType=0);
+	background-color:#ffab23;
+}
+.myButton2:active {
+	position:relative;
+	top:1px;
+}
+
+.flex-container-options {
+
+    display: flex;
+        
+    justify-content: start; 
+    align-items: flex-start; 
+    /* flex-flow: row nowrap; */ 
+    flex-direction: column; 
+    flex-wrap: nowrap; 
+    align-content: stretch;
+
+    background-color: #080808;
+    height: 100%;
+    padding: 2px;
+    gap: 5px;
+    width: 20%;
+
+  }
+
+  .flex-container-options > div{
+    background: #ffffff00;
+    border: 3px solid #91313100;
+    border-radius: 5px;
+    padding: 2px;
+  }
+
+
+  .item1-options { 
+    /* flex:1 1 auto; */
+    width: 100%;
+    flex-direction: column; 
+  }
+
+  .item1-options > div{
+    background: #ffffff00;
+    border: 1px solid #ffffff00;
+    border-radius: 2px;
+    padding: 1px;
+    font-size: small;
+  }
+  .item2-options { 
+    /* flex:1 1 auto; */
+    width: 100%;
+  }
+
+  .item2-options > div{
+    background: #ffffff00;
+    border: 1px solid #ffffff00;
+    border-radius: 2px;
+    padding: 1px;
+    font-size: small;
+  }
+			
+  .item3-options { 
+    /* flex:1 1 auto; */
+    width: 100%;
+  }
+
+  .item4-options { 
+    /* flex:1 1 auto; */
+    width: 100%;
+  }
+  .item5-options { 
+    /* flex:1 1 auto; */
+    width: 100%;
+  }
+
+
+  .item3-options > div{
+    background: #ffffff00;
+    border: 1px solid #ffffff00;
+    border-radius: 2px;
+    padding: 1px;
+  }
+
+  .item3-options > div{
+    flex-direction: column;
+    padding: 1px;
+  }
+
+  .item5-options > div{
+    flex-direction: column;
+    
+    padding: 1px;
+  }
+
+  .DateInput_input {
+    box-sizing: border-box;
+    display:flex;
+    font-size: small;
+}
+
+.DayPickerNavigation__verticalDefault {
+    text-align: center;
+    height: initial;
+    padding: 5px 0px;
+}
+
+.DayPickerNavigation_svg__vertical {
+    height: 10px;
+}
+
+.dash-dropdown .Select-menu-outer {
+    z-index: 1000;
+    background-color: #080808;
+    font-size: small;
+}
+
+#dash-uploader {
+    color: #ffab23;
+    min-height: 10px;
+    height: 50px;
+    width: 100%;
+    padding: 0px;
+    border-radius: 0px;
+    text-align: center;
+    font-size: medium;
+}
