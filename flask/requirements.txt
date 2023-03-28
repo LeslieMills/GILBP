@@ -22,7 +22,7 @@ dash==2.7.0
 plotly==5.11.0
 pymongo==4.3.3
 requests==2.28.1
-dash_bootstrap_components==1.21
+dash_bootstrap_components==1.2.1
 dash_uploader==0.6.0
 packaging==21.3
 Pillow==9.3.0
